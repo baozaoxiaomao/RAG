@@ -1,0 +1,9 @@
+# 忽略整个模型文件夹
+models/
+# 忽略二进制大文件
+*.safetensors
+*.bin
+*.pth
+# 忽略缓存文件
+__pycache__/
+*.pyc
