@@ -2,10 +2,8 @@
 
 ## 项目简介
 
-<<<<<<< HEAD
 本项目基于开源大语言模型 Qwen2.5，完成从**模型本地部署**到**可视化对话机器人**的全流程实现。核心采用「Ollama 轻量化部署 + FastAPI 后端 + Streamlit/Gradio 前端」架构，避开选学模块（vLLM 推理加速、自定义 GGUF 文件、模型微调等），聚焦核心功能落地，适合新手快速上手。
 
-=======
 本项目基于开源大语言模型 Qwen2.5，完成从模型本地部署到可视化对话机器人的全流程实现。核心采用「Ollama 轻量化部署 + FastAPI 后端 + Streamlit/Gradio 前端」架构，避开选学模块（vLLM 推理加速、自定义 GGUF 文件、模型微调等），聚焦核心功能落地，适合新手快速上手。
 项目可实现：本地离线对话、模型参数可视化配置、流式输出回复、历史对话记忆等功能，为后续扩展 RAG、Agent 等高级功能奠定基础。
 
@@ -275,3 +273,34 @@ python gradio_chat.py
 访问界面：浏览器访问 `http://127.0.0.1:7860`。
 
 <img width="1280" height="763" alt="8c856e1c346649d09cf9b92f7dcc465e" src="https://github.com/user-attachments/assets/fcb77849-d824-4f82-9bcb-301c9cc0d0ad" />
+
+### 步骤 11：RAG 本地文档问答
+准备文档：在 rag_files/test.txt 中写入测试内容：
+
+```
+我叫小毛
+我今年20岁
+我喜欢编程和AI大模型
+我正在学习RAG检索增强生成
+```
+运行 RAG 脚本：
+```
+python rag_chat.py
+```
+预期结果：模型基于 test.txt 内容回答问题（如 “我叫什么名字？”“我喜欢什么？”）。
+
+### 步骤 12：LangChain-Agent 智能工具调用
+
+```
+python agent_chat.py
+```
+预期结果：模型自动识别数学计算需求，调用工具计算并返回结果（如 “123+456 等于多少？” 返回 579）。
+
+```
+python gradio_chat.py
+```
+
+
+```
+python gradio_chat.py
+```
