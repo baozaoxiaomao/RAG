@@ -7,7 +7,6 @@
 
 =======
 本项目基于开源大语言模型 Qwen2.5，完成从模型本地部署到可视化对话机器人的全流程实现。核心采用「Ollama 轻量化部署 + FastAPI 后端 + Streamlit/Gradio 前端」架构，避开选学模块（vLLM 推理加速、自定义 GGUF 文件、模型微调等），聚焦核心功能落地，适合新手快速上手。
->>>>>>> 64dbc6e975ce33acef459818e6561b2677ff3fe3
 项目可实现：本地离线对话、模型参数可视化配置、流式输出回复、历史对话记忆等功能，为后续扩展 RAG、Agent 等高级功能奠定基础。
 
 ## 环境要求
@@ -196,7 +195,7 @@ python basic_infer.py
 
 **预期结果**：终端输出设备信息后，打印模型的对话回复，即表示模型本地部署、推理验证成功。
 
-![16ad883cd0464c0daa8ea2652023ae89](C:\Users\毛姐\AppData\Local\Temp\16ad883cd0464c0daa8ea2652023ae89.png)
+<img width="612" height="115" alt="fda7ba337cec469d9c092c2c8eb1b0dd" src="https://github.com/user-attachments/assets/46eb8fdb-7d00-48b6-a25c-33796645ef31" />
 
 ### 步骤 7：Ollama 部署 Qwen2.5（核心步骤）
 
@@ -227,7 +226,7 @@ python ollama_openai_test.py
 
 预期结果：终端流式输出模型回复，无报错即 API 调用成功。
 
-![084f12a8dafe4516a1edd8c8d59f81b6](C:\Users\毛姐\AppData\Local\Temp\084f12a8dafe4516a1edd8c8d59f81b6.png)
+<img width="720" height="360" alt="1c296a509fbe439fa016b68e16cbe30f" src="https://github.com/user-attachments/assets/97dec68d-c158-45d4-b09e-a6c17fbb3685" />
 
 ### 步骤 9：启动 FastAPI 后端服务
 
@@ -239,11 +238,11 @@ python fastapi_chat.py
 
 启动成功标志：终端显示 `Uvicorn running on http://0.0.0.0:6066`。
 
-![9200480d7d914e01925298e4d4b938bc](C:\Users\毛姐\AppData\Local\Temp\9200480d7d914e01925298e4d4b938bc.png)
+<img width="720" height="166" alt="8f80e610d6984411b5ea139bd6579df1" src="https://github.com/user-attachments/assets/6e858bec-0c89-4448-95a4-ab549e19ea4b" />
 
 接口测试（可选）：浏览器访问 `http://127.0.0.1:6066/docs`，可看到自动生成的 API 文档，测试 `/chat` 接口是否正常响应。
 
-![bf0cc7d34a5641ef8f9e15a99d1e49c6](C:\Users\毛姐\AppData\Local\Temp\bf0cc7d34a5641ef8f9e15a99d1e49c6.png)
+<img width="820" height="708" alt="b68172a8e014456397ae5b756065ffd3" src="https://github.com/user-attachments/assets/5a3dca61-6bf4-48b4-8be8-33ecb5fb3d5c" />
 
 ### 步骤 10：启动可视化前端（二选一）
 
@@ -255,13 +254,13 @@ python fastapi_chat.py
 streamlit run streamlit_chat.py
 ```
 
-![01def8a247a5457283f381d37c7a53b3](C:\Users\毛姐\AppData\Local\Temp\01def8a247a5457283f381d37c7a53b3.png)
+<img width="720" height="82" alt="8c31021482eb492aba90298277cb4e96" src="https://github.com/user-attachments/assets/d45add8d-6bec-4ab3-9cef-6250e40aa183" />
 
 首次启动提示：无需输入邮箱，直接按回车键跳过。
 
 访问界面：自动打开浏览器，地址为 `http://localhost:8501`。
 
-![6262a685aa07430aaf316ead93e55617](C:\Users\毛姐\AppData\Local\Temp\6262a685aa07430aaf316ead93e55617.png)
+<img width="1280" height="762" alt="285aaa1f8887466883ece8c1bf16c7f6" src="https://github.com/user-attachments/assets/254d9bf2-70bf-4727-880a-4483481378a0" />
 
 #### 方案 B：Gradio 前端（备选）
 
@@ -271,8 +270,8 @@ streamlit run streamlit_chat.py
 python gradio_chat.py
 ```
 
-![a8a3932c13f441dea223a12aed646d1b](C:\Users\毛姐\AppData\Local\Temp\a8a3932c13f441dea223a12aed646d1b.png)
+<img width="351" height="71" alt="e19f24c1193c44d39515ab4d2c5fc658" src="https://github.com/user-attachments/assets/ff0a717c-ab61-4d32-8d78-011ca1177618" />
 
 访问界面：浏览器访问 `http://127.0.0.1:7860`。
 
-![64b0c09349874559a3725d3d24007d6a](C:\Users\毛姐\AppData\Local\Temp\64b0c09349874559a3725d3d24007d6a.png)
+<img width="1280" height="763" alt="8c856e1c346649d09cf9b92f7dcc465e" src="https://github.com/user-attachments/assets/fcb77849-d824-4f82-9bcb-301c9cc0d0ad" />
